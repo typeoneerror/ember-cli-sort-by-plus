@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-sort-by-plus",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An ember.js computed property and helper for sortBy with natural sorting.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,11 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/typeoneerror/ember-cli-sort-by-plus",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Ben Borowski <ben.borowski@typeoneerror.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",

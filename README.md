@@ -1,5 +1,7 @@
 # ember-cli-sort-by-plus
 
+This is my first Ember CLI addon. Created as a learning experiment so not sure how useful it will be to you. Feel free to provide feedback though!
+
 ## TODO
 
 - [ ] Better tests, computed prop tests
