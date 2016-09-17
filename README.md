@@ -6,7 +6,7 @@ This is my first Ember CLI addon. Created as a learning experiment so not sure h
 
 - [ ] Better tests, computed prop tests
 - [ ] Proper Docs
-- [ ] Release
+- [x] Release
 
 ## Usage
 
