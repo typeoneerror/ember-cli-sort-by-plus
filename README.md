@@ -4,6 +4,7 @@
 
 - [ ] Tests
 - [ ] Proper Docs
+- [ ] Release
 
 ## Usage
 
