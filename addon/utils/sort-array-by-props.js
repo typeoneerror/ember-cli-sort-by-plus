@@ -24,8 +24,8 @@ export default function sortArrayByProps(array, ...sortProperties) {
       let left = get(itemA, prop);
       let right = get(itemB, prop);
       if (natural) {
-        left = parseFloat(left, 10);
-        right = parseFloat(right, 10);
+        left = parseFloat(left);
+        right = parseFloat(right);
       }
       const result = compare(left, right);
       if (result !== 0) {
