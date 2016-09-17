@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] Tests
+- [ ] Better tests, computed prop tests
 - [ ] Proper Docs
 - [ ] Release
 
@@ -10,7 +10,7 @@
 
 The sort-by-plus add-on exposes a `sortByPlus` computed property which allows you to sort arrays
 similary to the `sort` computed property, but adds support for natural sorting without a custom
-sort function. You also don't have to define the sort properties as a different property on your object.
+sort function (for cases like Ember Data when IDs are strings). You also don't have to define the sort properties as a different property on your object.
 
 ```javascript
 import Ember from 'ember';
@@ -19,7 +19,7 @@ import sortByPlus from 'ember-cli-sort-by-plus';
 const { computed: { sort }} = Ember;
 
 var Thing = Ember.Object.extend({
-  plusSort: sortByPlus('model', 'position:desc:numeric', 'id:asc:numeric'),
+  plusSort: sortByPlus('model', 'position:desc:natural', 'id:asc:natural'),
 
   modelSortProperties: ['position:desc', 'id:asc'],
   tradSort: sort('model', 'modelSortProperties')
@@ -27,14 +27,14 @@ var Thing = Ember.Object.extend({
 
 var thing = Thing.create({
   model: [
-    { id: 1, position: 1 }
-    { id: 2, position: 0 },
-    { id: 10, position: 0 }
+    { id: "1", position: 1 }
+    { id: "2", position: 0 },
+    { id: "10", position: 0 }
   ]
 });
 
-thing.get('plusSort').mapBy('id')   // => [1, 2, 10]
-thing.get('tradSort').mapBy('id')   // => [1, 10, 2]
+thing.get('plusSort').mapBy('id')   // => ["1", "2", "10"]
+thing.get('tradSort').mapBy('id')   // => ["1", "10", "2"]
 ```
 
 ## Installation

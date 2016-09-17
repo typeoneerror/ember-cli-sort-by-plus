@@ -13,5 +13,4 @@ export default function sortByPlus(itemsProperty, ...sortProperties) {
     const items = makeArray(get(this, itemsProperty));
     return sortArrayByProps(items, ...sortProperties);
   });
-
 }
