@@ -4,6 +4,7 @@ This is my first Ember CLI addon. Created as a learning experiment so not sure h
 
 ## TODO
 
+- [ ] Computed properties watched should be more than `items.[]`
 - [ ] Better tests, computed prop tests
 - [ ] Proper Docs
 - [x] Release
