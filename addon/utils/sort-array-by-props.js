@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import naturalSort from 'naturalSort';
 
 const {
   compare,
@@ -23,11 +24,12 @@ export default function sortArrayByProps(array, ...sortProperties) {
       const [prop, direction, natural] = normalizedSort[i];
       let left = get(itemA, prop);
       let right = get(itemB, prop);
+      let result = 0;
       if (natural) {
-        left = parseFloat(left);
-        right = parseFloat(right);
+        result = naturalSort(left, right);
+      }else{
+        result = compare(left, right);
       }
-      const result = compare(left, right);
       if (result !== 0) {
         return (direction === 'desc') ? (-1 * result) : result;
       }

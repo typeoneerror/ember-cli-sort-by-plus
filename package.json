@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-sort-by-plus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An ember.js computed property and helper for sortBy with natural sorting.",
   "directories": {
     "doc": "doc",
